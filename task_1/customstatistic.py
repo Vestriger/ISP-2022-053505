@@ -4,6 +4,7 @@ from statistics import median
 def clean(string, symb):
     string.lower()
     symbarr = list(symb)
+
     for i in symbarr:
         string = string.replace(i, ' ')
     return string
@@ -14,6 +15,7 @@ def repetition(string):
     string = string.split()
     d = {i: 1 for i in string}
     repetitions = []
+
     for i in string:
         if i not in repetitions:
             repetitions.append(i)
@@ -28,15 +30,18 @@ def topk_ngram(string):
     n = int(input("Enter N-gram: "))
     string = clean(string, "?!.,")
     string = string.split()
+
     for i in string:
         if len(i) < n:
             string[string.index(i)] = ""
     string = " ".join(string)
     string = string.split()
+
     for i in string:
         string[string.index(i)] = i[:n]
     d = {i: 1 for i in string}
     repetitions = []
+
     for i in string:
         if i not in repetitions:
             repetitions.append(i)
@@ -46,10 +51,7 @@ def topk_ngram(string):
     list_d = list(d.items())
     list_d.sort(key=lambda l: l[1])
     list_d.reverse()
-    i = 0
-    while i < k:
-        print(i+1, list_d[i])
-        i += 1
+    print(*enumerate(list_d[:k]), sep='\n')
 
 
 def average(string):
