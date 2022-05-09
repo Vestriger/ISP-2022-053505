@@ -1,4 +1,3 @@
-#!usr/bin/python3
 import argparse
 from custom_serialize import serializer_service
 parser_args = argparse.ArgumentParser()
@@ -19,5 +18,5 @@ if args.old_format is None:
 if args.to_file is None:
     args.to_file = args.file_path
 
-obj = dump_service.load(args.file_path, args.old_format)
-dump_service.dump(obj, args.format, args.file_path)
+obj = serializer_service.load(args.file_path, args.old_format)
+serializer_service.dump(obj, args.format, args.file_path)
