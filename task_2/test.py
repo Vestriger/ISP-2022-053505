@@ -1,5 +1,5 @@
-from custom_serialize.Serializer.serializer import Parser
-from custom_serialize.Serializer.json import Json
+from custom_serialize.serializer.serializer import Parser
+from custom_serialize.serializer.json import Json
 import math
 
 class InnerClass(object):

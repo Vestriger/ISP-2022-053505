@@ -1,4 +1,4 @@
-from custom_serialize.Serializer.serializer import Parser
+from custom_serialize.serializer.serializer import Parser
 from custom_serialize.serializer_settings import *
 
 test_dict = {

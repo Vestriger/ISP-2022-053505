@@ -1,5 +1,5 @@
 import inspect
-from custom_serialize.Serializer.consts import Consts
+from custom_serialize.serializer.consts import Consts
 from custom_serialize.serializer_settings import *
 
 
